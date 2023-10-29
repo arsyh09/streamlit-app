@@ -8,9 +8,6 @@ import hashlib
 import hmac
 import requests
 import time
-from Crypto.PublicKey import RSA
-from Crypto.Hash import SHA256
-from Crypto.Signature import pkcs1_15
 from operator import itemgetter
 from urllib.parse import urlencode
 
