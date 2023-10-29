@@ -1,5 +1,5 @@
 import streamlit as st
-from binance.client import Client
+from python-binance.binance.client import Client
 import pandas as pd
 import pandas_ta as ta
 import numpy as np
