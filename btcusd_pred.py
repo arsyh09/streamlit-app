@@ -219,6 +219,7 @@ st.set_page_config(page_title="Prediksi BTC/USD", page_icon="bitcoin.png")
 
 hide_st_style = """
             <style>
+            header {visibility: hidden;}
             footer {visibility: hidden;}
             <style>
             """
