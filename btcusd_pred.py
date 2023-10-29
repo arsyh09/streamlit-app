@@ -11,8 +11,8 @@ import plotly.express as px
 import os
 
 # Mendapatkan nilai dari variabel lingkungan
-api_key = os.environ.get('MY_API_KEY')
-api_secret = os.environ.get('MY_API_SECRET')
+api_key = st.secrets["MY_API_KEY"]
+api_secret = st.secrets["MY_API_SECRET"]
 
 
 # Fungsi untuk mengambil data dari Binance API sesuai timeframe
