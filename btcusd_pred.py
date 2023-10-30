@@ -121,7 +121,7 @@ def scheduler(selected_interval):
             time.sleep(53)
 
             data_aktual = get_binance_data(api_key, api_secret, selected_interval)
-            harga_aktual = data_aktual['close'].iloc[-2]
+            harga_aktual = data_aktual['close'].iloc[-2:-1]
 
             selisih_harga = prediction - harga_aktual
 
@@ -160,7 +160,7 @@ def scheduler(selected_interval):
             time.sleep(293)
             
             data_aktual = get_binance_data(api_key, api_secret, selected_interval)
-            harga_aktual = data_aktual['close'].iloc[-2]
+            harga_aktual = data_aktual['close'].iloc[-2:-1]
 
             selisih_harga = prediction - harga_aktual
 
@@ -198,7 +198,7 @@ def scheduler(selected_interval):
             time.sleep(893)
             
             data_aktual = get_binance_data(api_key, api_secret, selected_interval)
-            harga_aktual = data_aktual['close'].iloc[-2]
+            harga_aktual = data_aktual['close'].iloc[-2:-1]
 
             selisih_harga = prediction - harga_aktual
 
