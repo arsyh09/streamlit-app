@@ -8,6 +8,7 @@ from sklearn.preprocessing import MinMaxScaler
 import time
 from datetime import datetime
 import plotly.express as px
+import pytz
 import os
 
 # Mendapatkan nilai dari variabel lingkungan
@@ -102,7 +103,9 @@ def scheduler(selected_interval):
         now = datetime.now()
 
         if selected_interval == '1 menit' and now.second == 10:
-            current_time = now.strftime("%Y-%m-%d %H:%M")
+            wita_timezone = pytz.timezone('Asia/Makassar')
+            current_time_wita = now.astimezone(wita_timezone)
+            current_time = current_time_wita.strftime("%Y-%m-%d %H:%M")
             # Memanggil get_binance_data dengan interval yang sesuai
             data = get_binance_data(api_key, api_secret, selected_interval)
             # prediksi harga dari data pada fungsi get_data
@@ -138,7 +141,9 @@ def scheduler(selected_interval):
                 st.write(fig)
 
         elif selected_interval == '5 menit' and now.second == 10 and now.minute % 5 == 0:
-            current_time = now.strftime("%Y-%m-%d %H:%M")
+            wita_timezone = pytz.timezone('Asia/Makassar')
+            current_time_wita = now.astimezone(wita_timezone)
+            current_time = current_time_wita.strftime("%Y-%m-%d %H:%M")
             # Memanggil get_binance_data dengan interval yang sesuai
             data = get_binance_data(api_key, api_secret, selected_interval)
             # prediksi harga dari data pada fungsi get_data
@@ -174,7 +179,9 @@ def scheduler(selected_interval):
                 st.write(fig)
 
         elif selected_interval == '15 menit' and now.second == 10 and now.minute % 15 == 0:
-            current_time = now.strftime("%Y-%m-%d %H:%M")
+            wita_timezone = pytz.timezone('Asia/Makassar')
+            current_time_wita = now.astimezone(wita_timezone)
+            current_time = current_time_wita.strftime("%Y-%m-%d %H:%M")
             # Memanggil get_binance_data dengan interval yang sesuai
             data = get_binance_data(api_key, api_secret, selected_interval)
             # prediksi harga dari data pada fungsi get_data
