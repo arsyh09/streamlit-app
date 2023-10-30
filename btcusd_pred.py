@@ -118,10 +118,13 @@ def scheduler(selected_interval):
                 kpi1.metric(label="Datetime", value=date_pred.iloc[-1]["Datetime"])
                 kpi2.metric(label="Prediksi (USD)", value=date_pred.iloc[-1]["Prediksi"])
 
-            time.sleep(53)
+            time.sleep(54)
 
             data_aktual = get_binance_data(api_key, api_secret, selected_interval)
-            harga_aktual = data_aktual['close'].iloc[-2:-1].values[0]
+            harga_aktual = None
+            #harga_aktual = data_aktual['close'].iloc[-2:-1].values[0]
+            for nilai in data_aktual['close'].iloc[-2:-1].values:
+                harga_aktual = nilai
 
             selisih_harga = prediction - harga_aktual
 
@@ -157,10 +160,13 @@ def scheduler(selected_interval):
                 kpi1.metric(label="Datetime", value=date_pred.iloc[-1]["Datetime"])
                 kpi2.metric(label="Prediksi (USD)", value=date_pred.iloc[-1]["Prediksi"])
 
-            time.sleep(293)
+            time.sleep(294)
             
             data_aktual = get_binance_data(api_key, api_secret, selected_interval)
-            harga_aktual = data_aktual['close'].iloc[-2:-1].values[0]
+            #harga_aktual = data_aktual['close'].iloc[-2:-1].values[0]
+            harga_aktual = None
+            for nilai in data_aktual['close'].iloc[-2:-1].values:
+                harga_aktual = nilai
 
             selisih_harga = prediction - harga_aktual
 
@@ -195,10 +201,13 @@ def scheduler(selected_interval):
                 kpi1.metric(label="Datetime", value=date_pred.iloc[-1]["Datetime"])
                 kpi2.metric(label="Prediksi (USD)", value=date_pred.iloc[-1]["Prediksi"])
 
-            time.sleep(893)
+            time.sleep(894)
             
             data_aktual = get_binance_data(api_key, api_secret, selected_interval)
-            harga_aktual = data_aktual['close'].iloc[-2:-1].values[0]
+            #harga_aktual = data_aktual['close'].iloc[-2:-1].values[0]
+            harga_aktual = None
+            for nilai in data_aktual['close'].iloc[-2:-1].values:
+                harga_aktual = nilai
 
             selisih_harga = prediction - harga_aktual
 
