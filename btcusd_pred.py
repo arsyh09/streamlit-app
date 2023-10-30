@@ -24,7 +24,7 @@ def get_binance_data(api_key, api_secret, selected_interval):
         interval = Client.KLINE_INTERVAL_15MINUTE
     else:
         raise ValueError('Timeframe tidak valid.')
-    client = Client(api_key, api_secret)
+    client = Client(api_key, api_secret, tld='us')
     symbol = 'BTCUSDT'
     klines = client.get_historical_klines(symbol, interval)
 
