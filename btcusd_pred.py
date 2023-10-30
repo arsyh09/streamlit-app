@@ -118,10 +118,10 @@ def scheduler(selected_interval):
                 kpi1.metric(label="Datetime", value=date_pred.iloc[-1]["Datetime"])
                 kpi2.metric(label="Prediksi (USD)", value=date_pred.iloc[-1]["Prediksi"])
 
-            time.sleep(51)
+            time.sleep(53)
 
             data_aktual = get_binance_data(api_key, api_secret, selected_interval)
-            harga_aktual = data_aktual['close'].iloc[-1]
+            harga_aktual = data_aktual['close'].iloc[-2]
 
             selisih_harga = prediction - harga_aktual
 
@@ -157,10 +157,10 @@ def scheduler(selected_interval):
                 kpi1.metric(label="Datetime", value=date_pred.iloc[-1]["Datetime"])
                 kpi2.metric(label="Prediksi (USD)", value=date_pred.iloc[-1]["Prediksi"])
 
-            time.sleep(291)
+            time.sleep(293)
             
             data_aktual = get_binance_data(api_key, api_secret, selected_interval)
-            harga_aktual = data_aktual['close'].iloc[-1]
+            harga_aktual = data_aktual['close'].iloc[-2]
 
             selisih_harga = prediction - harga_aktual
 
@@ -195,10 +195,10 @@ def scheduler(selected_interval):
                 kpi1.metric(label="Datetime", value=date_pred.iloc[-1]["Datetime"])
                 kpi2.metric(label="Prediksi (USD)", value=date_pred.iloc[-1]["Prediksi"])
 
-            time.sleep(891)
+            time.sleep(893)
             
             data_aktual = get_binance_data(api_key, api_secret, selected_interval)
-            harga_aktual = data_aktual['close'].iloc[-1]
+            harga_aktual = data_aktual['close'].iloc[-2]
 
             selisih_harga = prediction - harga_aktual
 
